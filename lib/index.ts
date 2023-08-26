@@ -1,4 +1,4 @@
-import {  webResourceHandler } from '@balena/pinejs';
+import { webResourceHandler } from '@balena/pinejs';
 import * as memoize from 'memoizee';
 import { getSignedUrl } from '@aws-sdk/cloudfront-signer';
 import type { WebResourceType as WebResource } from '@balena/sbvr-types';
@@ -10,7 +10,6 @@ interface CloudFrontHandlerProps extends webResourceHandler.S3HandlerProps {
 }
 
 export class CloudFrontHandler extends webResourceHandler.S3Handler {
-
 	private readonly cfSecretKey: string;
 	private readonly cfPublicKeyId: string;
 	private readonly cfDistributionDomain: string;
@@ -33,7 +32,7 @@ export class CloudFrontHandler extends webResourceHandler.S3Handler {
 	}
 
 	// Memoize expects maxAge in MS and CF signing method in seconds.
-	// Normalization to use only seconds and therefore convert here from seconds to MS
+	// Normalization to use only seconds and therefore convert here from seconds to MS.
 	private cachedCfGetSignedUrl = memoize(this.cfSignUrl, {
 		maxAge: this.cfSignedUrlCacheExpireTimeSeconds * 1000,
 	});
@@ -43,18 +42,22 @@ export class CloudFrontHandler extends webResourceHandler.S3Handler {
 			url: `${this.cfDistributionDomain}/${fileKey}`,
 			keyPairId: this.cfPublicKeyId,
 			privateKey: this.cfSecretKey,
-			dateLessThan: this.getExpiryDate()
+			dateLessThan: this.getExpiryDate(),
 		});
 	}
 
 	private getExpiryDate(): string {
 		const now = new Date().getTime();
 		const expiry = now + this.cfSignedUrlExpireTimeSeconds * 1000;
-		return (new Date(expiry)).toISOString();
+		return new Date(expiry).toISOString();
 	}
 
 	private cfGetKeyFromHref(href: string): string {
 		const hrefWithoutParams = webResourceHandler.normalizeHref(href);
-		return hrefWithoutParams.split('/').slice(3).filter(part => part !== '').join('/')
+		return hrefWithoutParams
+			.split('/')
+			.slice(3)
+			.filter((part) => part !== '')
+			.join('/');
 	}
 }
