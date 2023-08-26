@@ -1,0 +1,34 @@
+{
+  "name": "@balena/pinejs-webresource-cloudfront",
+  "version": "0.0.1",
+  "description": "A PineJS WebResource handler for storing files on S3 and serving via AWS Cloudfront",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "exit 0",
+    "prettify": "balena-lint -e ts --fix lib",
+    "lint": "balena-lint -e ts lib && npx tsc --noEmit",
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\" && npm run build"
+  },
+  "author": "Balena Inc. <hello@balena.io>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@balena/lint": "^7.0.2",
+    "@balena/sbvr-types": "^6.0.0",
+    "husky": "^8.0.3",
+    "typescript": "^5.2.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "balena-lint --fix"
+    ],
+    "*.ts": [
+      "balena-lint --fix"
+    ]
+  },
+  "dependencies": {
+    "@aws-sdk/cloudfront-signer": "^3.398.0",
+    "@balena/pinejs": "^15.3.2",
+    "memoizee": "^0.4.15"
+  }
+}
