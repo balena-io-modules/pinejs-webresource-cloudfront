@@ -1,0 +1,18 @@
+- commits:
+    - subject: Fix doc detail
+      hash: 6272ef4855f5f9d5695362be148393ec90dd3ff0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Otávio Jacobi
+    - subject: Add cloudfront handler for pinejs webresources
+      hash: f378403807fcad1558dcd6cc52d6a68aba82e2b8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Otávio Jacobi
+  version: 0.0.2
+  title: ""
+  date: 2023-08-26T21:43:52.553Z
