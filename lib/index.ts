@@ -3,7 +3,8 @@ import * as memoize from 'memoizee';
 import { getSignedUrl } from '@aws-sdk/cloudfront-signer';
 import type { WebResourceType as WebResource } from '@balena/sbvr-types';
 
-interface CloudFrontHandlerProps extends webResourceHandler.S3HandlerProps {
+export interface CloudFrontHandlerProps
+	extends webResourceHandler.S3HandlerProps {
 	cfPublicKeyId: string;
 	cfSecretKey: string;
 	cfDistributionDomain: string;
