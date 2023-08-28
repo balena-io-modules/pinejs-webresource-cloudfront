@@ -1,4 +1,15 @@
 - commits:
+    - subject: Export CloudFrontHandler props typings
+      hash: 3a438126156faff30525ad4c8b6973af189af248
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Otávio Jacobi
+  version: 0.0.3
+  title: ""
+  date: 2023-08-28T14:03:51.553Z
+- commits:
     - subject: Fix doc detail
       hash: 6272ef4855f5f9d5695362be148393ec90dd3ff0
       body: ""
