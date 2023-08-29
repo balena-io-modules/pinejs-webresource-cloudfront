@@ -15,10 +15,6 @@ export class CloudFrontHandler extends webResourceHandler.S3Handler {
 	private readonly cfPublicKeyId: string;
 	private readonly cfDistributionDomain: string;
 
-	// TODO move S3 handler signedUrl as not private
-	private readonly cfSignedUrlExpireTimeSeconds = 86400; // 24h
-	private readonly cfSignedUrlCacheExpireTimeSeconds = 82800; // 22h
-
 	constructor(cfConfig: CloudFrontHandlerProps) {
 		super(cfConfig);
 		this.cfSecretKey = cfConfig.cfSecretKey;
@@ -28,28 +24,35 @@ export class CloudFrontHandler extends webResourceHandler.S3Handler {
 
 	public async onPreRespond(webResource: WebResource): Promise<WebResource> {
 		const fileKey = this.cfGetKeyFromHref(webResource.href);
-		webResource.href = this.cachedCfGetSignedUrl(fileKey);
+		webResource.href = await this.cachedCfGetSignedUrl(fileKey);
 		return webResource;
 	}
 
 	// Memoize expects maxAge in MS and CF signing method in seconds.
 	// Normalization to use only seconds and therefore convert here from seconds to MS.
 	private cachedCfGetSignedUrl = memoize(this.cfSignUrl, {
-		maxAge: this.cfSignedUrlCacheExpireTimeSeconds * 1000,
+		maxAge: this.signedUrlCacheExpireTimeSeconds * 1000,
 	});
 
-	private cfSignUrl(fileKey: string): string {
-		return getSignedUrl({
-			url: `${this.cfDistributionDomain}/${fileKey}`,
-			keyPairId: this.cfPublicKeyId,
-			privateKey: this.cfSecretKey,
-			dateLessThan: this.getExpiryDate(),
-		});
+	private async cfSignUrl(cfFileKey: string): Promise<string> {
+		try {
+			return getSignedUrl({
+				url: `${this.cfDistributionDomain}/${cfFileKey}`,
+				keyPairId: this.cfPublicKeyId,
+				privateKey: this.cfSecretKey,
+				dateLessThan: this.getExpiryDate(),
+			});
+		} catch (e) {
+			console.error('CloudFront signing failed with', e);
+			console.error('Trying to serve S3 signed url');
+			const s3Key = cfFileKey.split('/').at(-1) ?? cfFileKey;
+			return await this.cachedGetSignedUrl(s3Key);
+		}
 	}
 
 	private getExpiryDate(): string {
 		const now = new Date().getTime();
-		const expiry = now + this.cfSignedUrlExpireTimeSeconds * 1000;
+		const expiry = now + this.signedUrlExpireTimeSeconds * 1000;
 		return new Date(expiry).toISOString();
 	}
 

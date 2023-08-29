@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@aws-sdk/cloudfront-signer": "^3.398.0",
-    "@balena/pinejs": "^15.3.2",
+    "@balena/pinejs": "^15.3.3",
     "memoizee": "^0.4.15"
   },
   "versionist": {
