@@ -23,8 +23,10 @@ export class CloudFrontHandler extends webResourceHandler.S3Handler {
 	}
 
 	public async onPreRespond(webResource: WebResource): Promise<WebResource> {
-		const fileKey = this.cfGetKeyFromHref(webResource.href);
-		webResource.href = await this.cachedCfGetSignedUrl(fileKey);
+		if (webResource.href != null) {
+			const fileKey = this.cfGetKeyFromHref(webResource.href);
+			webResource.href = await this.cachedCfGetSignedUrl(fileKey);
+		}
 		return webResource;
 	}
 
