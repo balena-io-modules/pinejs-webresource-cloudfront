@@ -1,4 +1,15 @@
 - commits:
+    - subject: Fix ensure href is present before signing
+      hash: e9e2b55d79f593f9b78243a0c9da6c31e4020144
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Otávio Jacobi
+  version: 0.0.5
+  title: ""
+  date: 2023-09-03T12:56:11.513Z
+- commits:
     - subject: Export CloudFrontHandler props typings
       hash: e5961390269a9dda185153f4fe111d7e8862f910
       body: ""
