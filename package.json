@@ -8,20 +8,20 @@
     "test": "npm run lint",
     "prettify": "balena-lint -e ts --fix lib",
     "lint": "balena-lint -e ts lib && npx tsc --noEmit",
-    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\" && npm run build"
+    "prepare": "node -e \"try { (await import('husky')).default() } catch (e) { if (e.code !== 'ERR_MODULE_NOT_FOUND') throw e }\" --input-type module"
   },
   "author": "Balena Inc. <hello@balena.io>",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@balena/lint": "^7.0.2",
-    "@balena/sbvr-types": "^6.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
-    "typescript": "^5.2.2"
+    "@balena/lint": "^8.0.0",
+    "@balena/sbvr-types": "^7.0.6",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "typescript": "^5.4.3"
   },
   "dependencies": {
-    "@aws-sdk/cloudfront-signer": "^3.398.0",
-    "@balena/pinejs": "^15.3.3",
+    "@aws-sdk/cloudfront-signer": "^3.541.0",
+    "@balena/pinejs": "^16.0.2",
     "memoizee": "^0.4.15"
   },
   "versionist": {
