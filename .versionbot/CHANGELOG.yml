@@ -1,4 +1,15 @@
 - commits:
+    - subject: Update dependencies
+      hash: 1c9afbba10d9bc3edfd800727248652ffcbf918d
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Thodoris Greasidis
+  version: 0.1.0
+  title: ""
+  date: 2024-04-10T12:24:12.216Z
+- commits:
     - subject: Fix ensure href is present before signing
       hash: e9e2b55d79f593f9b78243a0c9da6c31e4020144
       body: ""
