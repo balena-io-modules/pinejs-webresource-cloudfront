@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@aws-sdk/cloudfront-signer": "^3.541.0",
-    "@balena/pinejs": "^16.0.2",
+    "@balena/pinejs": "17.0.0-build-wip-large-file-uploads-8d9c57891b422476172efba74cacc2a0fea09248-1",
     "memoizee": "^0.4.15"
   },
   "versionist": {
