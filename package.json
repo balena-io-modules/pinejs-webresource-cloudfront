@@ -21,8 +21,10 @@
   },
   "dependencies": {
     "@aws-sdk/cloudfront-signer": "^3.541.0",
-    "@balena/pinejs": "^16.0.2",
     "memoizee": "^0.4.15"
+  },
+  "peerDependencies": {
+    "@balena/pinejs": "^16.0.0 || ^17.0.0 || ^18.0.0"
   },
   "versionist": {
     "publishedAt": "2024-04-10T12:24:12.278Z"
