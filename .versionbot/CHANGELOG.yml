@@ -1,4 +1,15 @@
 - commits:
+    - subject: Switch @balena/pinejs to a peer dependency and support 17.x/18.x
+      hash: 91bc87db7d0e5e349353a3b33dc057c6a03a92fb
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Pagan Gazzard
+  version: 0.2.0
+  title: ""
+  date: 2024-08-30T16:35:10.844Z
+- commits:
     - subject: Update dependencies
       hash: 1c9afbba10d9bc3edfd800727248652ffcbf918d
       body: ""
