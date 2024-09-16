@@ -1,4 +1,15 @@
 - commits:
+    - subject: Add pinejs 19 as a supported peer version
+      hash: fb15fc5718a8e340c9634f42dec1343c158b3e5c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 0.2.1
+  title: ""
+  date: 2024-09-16T13:05:26.531Z
+- commits:
     - subject: Switch @balena/pinejs to a peer dependency and support 17.x/18.x
       hash: 91bc87db7d0e5e349353a3b33dc057c6a03a92fb
       body: ""
