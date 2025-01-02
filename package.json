@@ -13,6 +13,10 @@
   },
   "author": "Balena Inc. <hello@balena.io>",
   "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20.14.0",
+    "npm": ">=10.7.0"
+  },
   "devDependencies": {
     "@balena/lint": "^8.2.8",
     "@balena/sbvr-types": "^7.1.3",
