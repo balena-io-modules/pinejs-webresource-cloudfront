@@ -2,6 +2,7 @@
   "name": "@balena/pinejs-webresource-cloudfront",
   "version": "0.2.1",
   "description": "A PineJS WebResource handler for storing files on S3 and serving via AWS Cloudfront",
+  "type": "commonjs",
   "main": "build/index.js",
   "scripts": {
     "build": "tsc",

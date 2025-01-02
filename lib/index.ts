@@ -1,5 +1,5 @@
 import { webResourceHandler } from '@balena/pinejs';
-import * as memoize from 'memoizee';
+import memoize from 'memoizee';
 import { getSignedUrl } from '@aws-sdk/cloudfront-signer';
 import type { WebResourceType as WebResource } from '@balena/sbvr-types';
 
