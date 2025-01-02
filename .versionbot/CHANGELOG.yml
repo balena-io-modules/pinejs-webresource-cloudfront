@@ -1,4 +1,15 @@
 - commits:
+    - subject: Convert to ESM
+      hash: 0aaeea334be207420e8fd549405068b094c781f0
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Pagan Gazzard
+  version: 1.0.0
+  title: ""
+  date: 2025-01-02T12:37:27.439Z
+- commits:
     - subject: Use node16 module resolution in tsconfig
       hash: c0043798b095a6ab5211d257068044631aa84a93
       body: ""
