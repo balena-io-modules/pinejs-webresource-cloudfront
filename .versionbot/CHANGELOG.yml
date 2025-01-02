@@ -1,4 +1,22 @@
 - commits:
+    - subject: Use node16 module resolution in tsconfig
+      hash: c0043798b095a6ab5211d257068044631aa84a93
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+    - subject: Update dependencies
+      hash: 61d56145c698982a8e1aef6c606441e1d9dbced9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 0.2.2
+  title: ""
+  date: 2025-01-02T12:32:04.985Z
+- commits:
     - subject: Add pinejs 19 as a supported peer version
       hash: fb15fc5718a8e340c9634f42dec1343c158b3e5c
       body: ""
