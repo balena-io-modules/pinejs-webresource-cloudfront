@@ -1,16 +1,19 @@
-import { webResourceHandler } from '@balena/pinejs';
 import memoize from 'memoizee';
 import { getSignedUrl } from '@aws-sdk/cloudfront-signer';
+import { S3Handler, type S3HandlerProps } from '@balena/pinejs-webresource-s3';
 import type { WebResourceType as WebResource } from '@balena/sbvr-types';
 
-export interface CloudFrontHandlerProps
-	extends webResourceHandler.S3HandlerProps {
+export interface CloudFrontHandlerProps extends S3HandlerProps {
 	cfPublicKeyId: string;
 	cfSecretKey: string;
 	cfDistributionDomain: string;
 }
 
-export class CloudFrontHandler extends webResourceHandler.S3Handler {
+const normalizeHref = (href: string) => {
+	return href.split('?', 1)[0];
+};
+
+export class CloudFrontHandler extends S3Handler {
 	private readonly cfSecretKey: string;
 	private readonly cfPublicKeyId: string;
 	private readonly cfDistributionDomain: string;
@@ -59,7 +62,7 @@ export class CloudFrontHandler extends webResourceHandler.S3Handler {
 	}
 
 	private cfGetKeyFromHref(href: string): string {
-		const hrefWithoutParams = webResourceHandler.normalizeHref(href);
+		const hrefWithoutParams = normalizeHref(href);
 		return hrefWithoutParams
 			.split('/')
 			.slice(3)
