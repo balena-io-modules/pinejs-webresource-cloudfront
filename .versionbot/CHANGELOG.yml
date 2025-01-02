@@ -1,4 +1,15 @@
 - commits:
+    - subject: Use standalone S3 Handler instead of pinejs core one
+      hash: 700204a6cb69b71634037e0716a4d3ae4c2cfe4f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Otavio Jacobi
+  version: 1.0.2
+  title: ""
+  date: 2025-01-02T15:44:26.505Z
+- commits:
     - subject: Add minimum supported node and npm versions
       hash: 14ac975309148d26efbbe45a4bd7c34b68fade5f
       body: ""
