@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency @balena/lint to v9
+      hash: c139122f08cf492cf566ff098e65bccaa15e4936
+      body: |
+        Update @balena/lint from 8.2.8 to 9.1.4
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+  version: 1.0.3
+  title: ""
+  date: 2025-03-24T16:07:52.861Z
+- commits:
     - subject: Use standalone S3 Handler instead of pinejs core one
       hash: 700204a6cb69b71634037e0716a4d3ae4c2cfe4f
       body: ""
