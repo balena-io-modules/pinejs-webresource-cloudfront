@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency @types/memoizee to v0.4.12
+      hash: ebdf20146160d17d542e28a2fb6fd9766873e149
+      body: |
+        Update @types/memoizee from 0.4.11 to 0.4.12
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+  version: 1.0.4
+  title: ""
+  date: 2025-03-27T19:02:06.641Z
+- commits:
     - subject: Update dependency @balena/lint to v9
       hash: c139122f08cf492cf566ff098e65bccaa15e4936
       body: |
