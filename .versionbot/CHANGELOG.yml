@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency @balena/sbvr-types to v9
+      hash: d489a4cdbd06894aa44b58f01f44322171e69a3b
+      body: |
+        Update @balena/sbvr-types from 7.1.3 to 9.2.2
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+  version: 1.0.5
+  title: ""
+  date: 2025-05-05T19:25:29.958Z
+- commits:
     - subject: Update dependency @types/memoizee to v0.4.12
       hash: ebdf20146160d17d542e28a2fb6fd9766873e149
       body: |
