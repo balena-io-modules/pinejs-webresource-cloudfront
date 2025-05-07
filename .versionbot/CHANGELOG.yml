@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency @balena/pinejs-webresource-s3 to v2
+      hash: ec3b1bee099a683223b4ef19128c1051d9b9cad6
+      body: |
+        Update @balena/pinejs-webresource-s3 from 1.0.7 to 2.0.0
+      footer:
+        Change-type: major
+        change-type: major
+      author: balena-renovate[bot]
+  version: 2.0.0
+  title: ""
+  date: 2025-05-07T16:12:09.513Z
+- commits:
     - subject: Update dependency @balena/sbvr-types to v9
       hash: d489a4cdbd06894aa44b58f01f44322171e69a3b
       body: |
