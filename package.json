@@ -13,6 +13,10 @@
   },
   "author": "Balena Inc. <hello@balena.io>",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balena-io-modules/pinejs-webresource-cloudfront.git"
+  },
   "engines": {
     "node": ">=20.14.0",
     "npm": ">=10.7.0"
