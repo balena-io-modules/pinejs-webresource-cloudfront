@@ -1,6 +1,6 @@
 {
   "name": "@balena/pinejs-webresource-cloudfront",
-  "version": "2.0.14",
+  "version": "2.0.15",
   "description": "A PineJS WebResource handler for storing files on S3 and serving via AWS Cloudfront",
   "type": "module",
   "main": "build/index.js",
@@ -35,6 +35,6 @@
     "memoizee": "0.4.17"
   },
   "versionist": {
-    "publishedAt": "2026-03-26T08:20:32.689Z"
+    "publishedAt": "2026-03-26T09:24:01.716Z"
   }
 }
