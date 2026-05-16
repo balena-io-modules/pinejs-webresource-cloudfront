@@ -25,9 +25,9 @@
     "@balena/lint": "^9.0.0",
     "@balena/sbvr-types": "^11.0.0",
     "@types/memoizee": "0.4.12",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.3.0",
-    "typescript": "^5.7.2"
+    "husky": "9.1.7",
+    "lint-staged": "15.5.2",
+    "typescript": "5.9.3"
   },
   "dependencies": {
     "@aws-sdk/cloudfront-signer": "^3.709.0",
