@@ -1,4 +1,15 @@
 - commits:
+    - subject: Update typescript to v6
+      hash: b7aa16f02136d44e63b2251520924a0fb1e0e979
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: joshbwlng
+  version: 2.0.22
+  title: ""
+  date: 2026-06-18T07:45:00.252Z
+- commits:
     - subject: Update dependency lint-staged to v17
       hash: 0ef5669134bfa3332db2eb7ee0c7b8987d24e176
       body: |
