@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"module": "Node16",
-		"rootDir": "./lib",
+		"rootDir": ".",
 		"outDir": "build",
 		"noUnusedParameters": true,
 		"noUnusedLocals": true,
@@ -10,10 +10,14 @@
 		"strict": true,
 		"target": "ES2022",
 		"declaration": true,
-		"skipLibCheck": true
+		"skipLibCheck": true,
+		"types": ["node"],
+		"erasableSyntaxOnly": true,
+		"rewriteRelativeImportExtensions": true
 	},
 	"include": [
-		"lib/**/*.ts"
+		"lib/**/*.ts",
+		"test/**/*.ts"
 	],
 	"exclude": [
 		"node_modules"
