@@ -5,10 +5,10 @@
   "type": "module",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc",
-    "test": "npm run lint",
-    "prettify": "balena-lint -e ts --fix lib",
-    "lint": "balena-lint -e ts lib && npx tsc --noEmit",
+    "build": "tsc --project tsconfig.build.json",
+    "test": "npm run lint && node --test test/*.test.ts",
+    "prettify": "balena-lint -e ts --fix lib test",
+    "lint": "balena-lint -e ts lib test && npx tsc --noEmit",
     "prepare": "node -e \"try { (await import('husky')).default() } catch (e) { if (e.code !== 'ERR_MODULE_NOT_FOUND') throw e }\" --input-type module"
   },
   "author": "Balena Inc. <hello@balena.io>",
@@ -24,7 +24,10 @@
   "devDependencies": {
     "@balena/lint": "^9.0.0",
     "@balena/sbvr-types": "^11.0.0",
+    "@types/chai": "5.2.3",
     "@types/memoizee": "0.4.12",
+    "@types/node": "20.19.43",
+    "chai": "6.3.0",
     "husky": "9.1.7",
     "lint-staged": "17.6.0",
     "typescript": "6.0.3"
