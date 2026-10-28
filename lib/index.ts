@@ -37,6 +37,7 @@ export class CloudFrontHandler extends S3Handler {
 	// Normalization to use only seconds and therefore convert here from seconds to MS.
 	private cachedCfGetSignedUrl = memoize(this.cfSignUrl, {
 		maxAge: this.signedUrlCacheExpireTimeSeconds * 1000,
+		primitive: true,
 	});
 
 	private async cfSignUrl(cfFileKey: string): Promise<string> {
