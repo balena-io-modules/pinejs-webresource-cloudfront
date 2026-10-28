@@ -1,4 +1,23 @@
 - commits:
+    - subject: Use primitive mode for the CloudFront signed URL cache
+      hash: 4d53fbff8800e9b015e8944073ebb8edf0a2bc29
+      body: |
+        memoizee's default mode for single-argument functions keeps the cached
+        arguments in an array and finds them with indexOf, so every lookup
+        (hit or miss) and every expiry scans all cached file keys. With N files
+        signed within signedUrlCacheExpireTimeSeconds this makes each
+        onPreRespond O(N) and filling the cache O(N^2), e.g. ~550µs per hit
+        with 50k cached keys. The file key is always a string, so primitive
+        mode, which keys the cache by String(arg) in an object, is equivalent
+        and O(1).
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 2.0.33
+  title: ""
+  date: 2026-10-28T01:00:22.567Z
+- commits:
     - subject: Update dependency lint-staged to v17.6.0
       hash: 488437908333746b03bcdbb40b61a32c5083fb3e
       body: |
