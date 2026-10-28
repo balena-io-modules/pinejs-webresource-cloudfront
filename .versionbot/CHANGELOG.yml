@@ -1,4 +1,19 @@
 - commits:
+    - subject: Add a test suite for CloudFrontHandler
+      hash: 4689b47c74b417dd13eb7defdd76c230dc722fb4
+      body: |
+        The tests use node:test with chai expectations.
+        tsconfig.json now covers lib and test so `npm run lint` type-checks
+        the tests, while the build uses tsconfig.build.json to keep test files
+        out of `build/`.
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Pagan Gazzard
+  version: 2.0.34
+  title: ""
+  date: 2026-10-28T22:59:14.303Z
+- commits:
     - subject: Use primitive mode for the CloudFront signed URL cache
       hash: 4d53fbff8800e9b015e8944073ebb8edf0a2bc29
       body: |
