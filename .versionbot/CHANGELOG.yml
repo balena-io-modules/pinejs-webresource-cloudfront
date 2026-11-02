@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency @balena/lint to v11
+      hash: b1340569cf0fc20f19d7ae7f48197b18b6686754
+      body: |
+        Update @balena/lint from 9.4.15 to 11.0.0
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+  version: 2.0.35
+  title: ""
+  date: 2026-11-02T22:41:24.753Z
+- commits:
     - subject: Add a test suite for CloudFrontHandler
       hash: 4689b47c74b417dd13eb7defdd76c230dc722fb4
       body: |
