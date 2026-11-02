@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update dependency @balena/sbvr-types to v12
+      hash: 43ac2b7199e1e2ed610e42f7948de9e15867b0d6
+      body: |
+        Update @balena/sbvr-types from 11.3.14 to 12.0.6
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+  version: 2.0.36
+  title: ""
+  date: 2026-11-02T23:18:50.848Z
+- commits:
     - subject: Update dependency @balena/lint to v11
       hash: b1340569cf0fc20f19d7ae7f48197b18b6686754
       body: |
